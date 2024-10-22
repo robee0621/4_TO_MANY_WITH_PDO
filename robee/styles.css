@@ -1,11 +1,75 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2 {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
     color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.notifications {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.notification {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: auto;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1a1a1a;
 }
 
 table {
@@ -14,19 +78,62 @@ table {
     margin-bottom: 20px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
 th, td {
-    padding: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #e7f3fe;
+    color: #1a1a1a;
 }
 
-form {
-    margin-bottom: 20px;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
+
+.button {
+    padding: 8px 12px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button.edit {
+    background-color: #007bff;
+}
+
+.button.edit:hover {
+    background-color: #0056b3;
+}
+
+.button.delete {
+    background-color: #dc3545;
+}
+
+.button.delete:hover {
+    background-color: #c82333;
+}
+
+.button.add {
+    background-color: #28a745;
+}
+
+.button.add:hover {
+    background-color: #218838;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-form label {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.add-form
